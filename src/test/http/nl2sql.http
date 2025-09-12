@@ -1,0 +1,22 @@
+GET http://localhost:8080/test-ai?prompt=Write a haiku about Spring AI
+
+###
+GET http://localhost:8080/test-client?prompt=Write a haiku about Spring AI
+
+### Natural Language to SQL test
+POST http://localhost:8080/api/nl2sql
+Content-Type: application/json
+
+{
+  "naturalQuery": "Top 10 customers by spend last 90 days in region APAC, show sku breakdown and spikes",
+  "explain": false
+}
+
+### Natural Language to SQL test basic
+POST http://localhost:8080/api/nl2sql
+Content-Type: application/json
+
+{
+  "naturalQuery": "Top 10 customers by total spend in the last 90 days in region APAC",
+  "explain": false
+}
